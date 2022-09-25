@@ -1,0 +1,72 @@
+{% extends 'app/base.html' %}
+
+{% block js %}
+
+<script>
+    function eliminarProducto(id){
+        Swal.fire({
+            "title": "¿Estas seguro?",
+            "text": "esta acción no se puede deshacer",
+            "icon": "question",
+            "showCancelButton":true,
+            "cancelButtonText":"No, Cancelar",
+            "confirmButtonText":"Si, Eliminar",
+            "confirmButtonColor": "darkblue",
+            "cancelButtonColor": "darkred"
+        })
+        .then(function(result) {
+            if(result.isConfirmed) {
+                window.location.href = "/eliminar-producto/"+id+"/"
+            }
+        })
+    }
+</script>
+
+{% endblock %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/estilos_form.css' %}">
+{% endblock %}
+
+{% block contenido %}
+{% load humanize %}
+<br><br><br>
+<div class="card">
+    <div class="card-body">
+        <h2>Listado de Productos</h2>
+        <hr>
+        <table class="table table-striped table-hover table-responsive-sm">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Peso</th>
+                <th>Marca</th>
+                <th>Opciones</th>
+            </tr>
+        
+            {% for p in entity %}
+        
+            <tr>
+                <td>{{ p.nombre | title }}</td>
+                <td>${{ p.precio | intcomma }}</td>
+                <td>{{ p.peso }} Kg</td>
+                <td>{{ p.marca | title }}</td>
+                <td>
+                    <a href="{% url 'modificar_producto' p.id %}" class="btn btn-info btn-sm">Modificar</a>
+                    <a href="#" onclick="eliminarProducto({{ p.id }})" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        
+            {% endfor %}
+        </table>
+        <hr>
+        <div>
+            {% include 'app/paginator.html' %}
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(217 195 252);
+}
+
+
+.header {
+    background-color: rgb(172, 127, 255);
+    display: flex;
+    justify-content: space-around;
+}
+
+.titulo{
+    font-family: "Courier New", Courier, monospace;
+}
+ 
+.navegacion {
+    float: right;
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+}
+ 
+.principal object {
+    margin: 0 auto; 
+    display:block;
+    background-color: rgb(179, 157, 214);
+}
+ 
+.abajo_del_Gato {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(179, 157, 214);
+}
+ 
+.contenido {
+    display: flex;
+    background-color: rgb(172, 127, 255);
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    font-family: verdana;
+    font-weight: bold;
+}
+ 
+.principal {
+    background-color: rgb(179, 157, 214);
+}
+ 
+.fono {
+    width: 30%;
+    font-family: "Courier New", Courier, monospace;
+}
+ 
+.rescate {
+    width: 40%;
+    text-align: center;
+    background-color: rgb(179, 157, 214);
+}
+ 
+.redes {
+    width: 30%;
+    text-align: center;
+}
+ 
+.redes ul li {
+    background-color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+ 
+.redes img {
+    height: 16px;
+}
+ 
+.lateral_1, .lateral_2 {
+    width: 50%;
+    height: 500px;
+    padding: 30px;
+    background-color: rgb(179, 157, 214);
+    font-family: "Courier New", Courier, monospace;
+}
+ 
+.lateral_1 {
+    text-align: right;
+    background-color: rgb(179, 157, 214);
+    font-family: "Courier New", Courier, monospace;
+}
+ 
+.lateral_2 img {
+    width: 50%;
+    background-color: rgb(179, 157, 214);
+    font-family: "Courier New", Courier, monospace;
+}
+
+.Adopcion {
+    font-family: "Courier New", Courier, monospace;
+}
+ 
+.contenedor-inferior {
+    display: flex;
+    background-color: rgb(179, 157, 214);
+    padding-bottom: 50px;
+}
+ 
+@media screen and (max-width:720px) {
+    .header {
+        flex-direction: column;
+    }
+    .footer {
+        display: none;
+    }
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.footer{
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(148, 112, 206);
+}

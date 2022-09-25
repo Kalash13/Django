@@ -1,0 +1,81 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/css/estilo.css' %}">
+{% endblock %}
+
+{% block js %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block contenido %}
+
+<!-- Video Inicial -->
+<div class="principal">
+    <object data="https://www.youtube.com/embed/u0XHVssfsYM" width="560" height="315" type="text/html">
+    </object>
+</div>
+<!-- Contenedor inferior con datos de adopcion y financiamiento-->
+<div class="contenedor-inferior container">
+    <div class="row">
+        <br>
+        <div class="col-6 col-md-6 lateral_1">
+            <h1>Adopción</h1>
+            <h5>Condiciones</h5>
+            <p>- Nos preocupamos de que nuestros gatos tengan seguridad, de esta forma se necesita un buen espacio.
+            </p>
+            <p> > Idealmente que sean indoor </p>
+            <p> > Tener zonas de juegos</p>
+            <p> > Amarlos, obvio es lo fundamental</p>
+            <img src="{% static 'app/img/gatos5.jpg' %}" alt="gato_en_adopcion" class="col-8 col-md-8" />
+        </div>
+        <br>
+        <div class="col-6 col-md-6 lateral_2">
+            <img src="{% static 'app/img/GatoDinero.jpg' %}" alt="financiamiento" />
+            <h1>RECAUDACIÓN DE FONDOS</h1>
+            <h5> FINANCIAMIENTO</h5>
+            <p> A base de campañas solidarias y eventos de mascotas es como financiamos nuestro mantenimiento a los
+                gatos que tenemos acogidos por un tiempo.</p>
+        </div>
+        <br>
+
+    </div>
+</div>
+<!-- Contenedor de contacto bajada de foto y redes sociales-->
+<section class="contenido">
+    <div class="fono">
+        <h5><a>+56 9 56937133</a></h5>
+    </div>
+    <div class="Adopcion">
+        <h5><a> Adopción de Gatos </a></h5>
+    </div>
+    <div class="redes">
+        <ul>
+            <li>
+                <img src="{% static 'app/img/icons/facebook-f-brands.svg' %}" alt="facebook" />
+            </li>
+            <li>
+                <img src="{% static 'app/img/icons/google-plus-g-brands.svg' %}" alt="google+" />
+            </li>
+            <li>
+                <img src="{% static 'app/img/icons/instagram-brands.svg' %}" alt="instagram" />
+            </li>
+            <li>
+                <img src="{% static 'app/img/icons/envelope-solid.svg' %}" alt="mail" />
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+{% endblock %}

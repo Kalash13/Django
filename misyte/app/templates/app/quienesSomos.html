@@ -1,0 +1,66 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/css/estiloSomos.css' %}">
+{% endblock %}
+
+{% block js %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% block contenido %}
+
+    <!-- Video cabezal -->
+    <div class="principal">
+        <object data="https://www.youtube.com/embed/u0XHVssfsYM" width="560" height="315" type="text/html">
+        </object>
+    </div>
+    <!-- Contenedor inferior con Somos, Mision, Redes y Veterinaria-->
+    <div class="contenedor-inferior container">
+        <div class="row">
+            <hr>
+            <div class="Somos">
+                <h1>Adopta un minino</h1>
+                <p> Somos una organizacion sin fines de lucro para ayudar a gatos que necesitan un hogar y nuestra
+                    ayuda,
+                    nos preocupamos de que tengan seguridad, alimentación, una buena salud y un lugar agradable donde
+                    habitar.</p>
+                <img src="{% static 'app/img/GatoAdop.webp' %}" alt="somoss" class="adop" />
+            </div>
+            <hr>
+            <div class="Mision">
+                <h1>Nuestra Misión</h1>
+                <p> Llevar a cada gato a un hogar seguro, de buen entorno, mientras no tengan dicho hogar,
+                    poder darles un buen lugar en el cual vivir seguros.</p>
+                <img src="{% static 'app/img/Brunito.jpeg' %}" alt="bruno" />
+            </div>
+            <hr>
+            <div class="Redes">
+                <h1>Nuestras redes</h1>
+                <p> A base de campañas solidarias y eventos de mascotas es como financiamos nuestro mantenimiento a los
+                    gatos que tenemos acogidos por un tiempo.</p>
+                <img src="{% static 'app/img/redesSociales.jpg' %}" alt="red" />
+            </div>
+            <hr>
+            <div class="Veterinaria">
+                <h1>Contamos con nuestra propia veterinaria</h1>
+                <p> Constanza es quien se encarga de que los gatos acogidos esten en un buen estado de salud,
+                    con sus vacunas y desparasitaciones al día, y así, sus nuevos tutores los adoptarán sanos.</p>
+                <img src="{% static 'app/img/ConiIvanVet.jpeg' %}" alt="vet" />
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    {% endblock %}

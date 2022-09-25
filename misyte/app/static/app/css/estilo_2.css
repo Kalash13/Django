@@ -1,0 +1,35 @@
+.contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenedor>* {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header {
+    background-color: tomato;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.footer {
+    background-color: lightblue;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.main {
+    text-align: left;
+    background-color: deepskyblue;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.aside-1 {
+    background-color: gold;
+}
+
+.aside-2 {
+    background-color: hotpink;
+}
